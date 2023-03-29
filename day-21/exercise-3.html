@@ -1,0 +1,44 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript for Everyone:DOM</title>
+  </head>
+  <body>
+    <div class="wrapper">
+        <h1>Asabeneh Yetayeh challenges in 2020</h1>
+        <h2>30DaysOfJavaScript Challenge</h2>
+        <ul>
+            <li>30DaysOfPython Challenge Done</li>
+            <li>30DaysOfJavaScript Challenge Ongoing</li>
+            <li>30DaysOfReact Challenge Coming</li>
+            <li>30DaysOfFullStack Challenge Coming</li>
+            <li>30DaysOfDataAnalysis Challenge Coming</li>
+            <li>30DaysOfReactNative Challenge Coming</li>
+            <li>30DaysOfMachineLearning Challenge Coming</li>
+        </ul>
+    </div>
+    <script>
+        const heading = document.querySelector('h1')
+        setInterval(()=> {
+            const r = Math.floor(Math.random() * 256)
+            const g = Math.floor(Math.random() * 256)
+            const b = Math.floor(Math.random() * 256)
+        heading.style.color = `rgb(${r},${g},${b})`
+        console.log(`rgb(${r},${g},${b})`)
+        }, 2000)
+        const listItems = document.querySelectorAll('li')
+        for(let i=0; i<listItems.length; i++){
+            let listItem = listItems[i].textContent;
+            if(listItem.includes('Done')){
+                listItems[i].style.color='green'
+            }else if(listItem.includes('Ongoing')){
+                listItems[i].style.color='yellow'
+            }else if(listItem.includes('Coming')){
+                listItems[i].style.color='red'
+            }
+        }
+
+    </script>
+  </body>
+</html>

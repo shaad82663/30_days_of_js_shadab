@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Document Object Model</title>
+    </head>
+    <body>
+        <p id='first-para'>First</p>
+        <p id='second-para'>Second</p>
+        <p id='third-para'>Three</p>
+        <p id='forth-para'>Four</p>
+     <h1></h1>
+      <script>
+        //Q: Get the first paragraph by using document.querySelector(tagname) and tag name
+        var firstPara = document.querySelector('p')
+        // firstPara.innerHTML = 'first catched'
+
+        //Q: Get each of the the paragraph using document.querySelector('#id') and by their id
+        firstPara = document.querySelector('#first-para')
+        var secondPara = document.querySelector('#second-para')
+        var thirdPara = document.querySelector('#third-para')
+        var forthPara = document.querySelector('#forth-para')
+        // thirdPara.innerHTML='third catched'
+
+        //Q: Get all the p as nodeList using document.querySelectorAll(tagname) and by their tag name
+        var allPara = document.querySelectorAll('p')
+
+        // Q: Loop through the nodeList and get the text content of each paragraph
+        allPara.forEach(el => console.log(el.textContent))
+
+        //Q: Set a text content to paragraph the fourth paragraph,Fourth Paragraph
+        forthPara.innerHTML = 'Forth Paragraph'
+
+        // Q: Set id and class attribute for all the paragraphs using different attribute setting methods
+        firstPara.className = 'first-paragraph'
+        secondPara.setAttribute('class', 'second-paragraph')
+      </script>
+    </body>
+  </html>

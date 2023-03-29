@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Document Object Model</title>
+    </head>
+    <body>
+        <p id='first-para'>First</p>
+        <p id='second-para'>Second</p>
+        <p id='third-para'>Three</p>
+        <p id='forth-para'>Four</p>
+     <h1></h1>
+      <script>
+        //Q: Get the first paragraph by using document.querySelector(tagname) and tag name
+        var firstPara = document.querySelector('p')
+        // firstPara.innerHTML = 'first catched'
+
+        //Q: Get each of the the paragraph using document.querySelector('#id') and by their id
+        firstPara = document.querySelector('#first-para')
+        var secondPara = document.querySelector('#second-para')
+        var thirdPara = document.querySelector('#third-para')
+        var forthPara = document.querySelector('#forth-para')
+        // thirdPara.innerHTML='third catched'
+ 
+        firstPara.style.color = 'red'
+      </script>
+    </body>
+  </html>
