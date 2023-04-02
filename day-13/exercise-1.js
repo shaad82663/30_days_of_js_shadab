@@ -9,8 +9,9 @@ console.table(countries)
 console.groupEnd()
 
 
-const countryObj = Object.fromEntries(countries)
+const countryObject = Object.fromEntries(countries)
 console.group('Countries Object')
-console.table(countryObj)
+console.table(countryObject)   
+
 console.groupEnd()
   
