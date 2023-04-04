@@ -1,56 +1,55 @@
-*{
-    margin : 0;
-    padding: 0;
-    box-sizing: content-box;
-    text-align: center;
-    background-color:   #d8e2e6;
-    font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  text-align: center;
+  background-color: #d8e2e6;
+  font-family: 'Poppins', sans-serif;
 }
 
 #countries {
-    margin:  50px;
+  margin: 50px;
 }
 
 button {
-    padding: 10px;
-    margin:  10px;
-    border:  none;
-    background: linear-gradient(to bottom right, #FFFF66, #FFCC66);
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  background: linear-gradient(to bottom right, #FFFF66, #FFCC66);
 }
 
 .graph-wrapper {
-    display: grid;
-    grid-template-columns: 15% auto 15%;
-    grid-template-rows: auto;
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
-    padding: 10px;
-    box-sizing: border-box;
-    align-items:  center;
-  }
-  
-  .graph-wrapper > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: fit-content;
-    padding: 5px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-  }
-  
-  .graph-wrapper > div:first-child {
-    grid-column: 1 / 2;
-  }
-  
-  .graph-wrapper > div:nth-child(2) {
-    background: linear-gradient(to bottom right, #FFFF66, #FFCC66);
-    height: 30px;
-    grid-column: 2 / 3;
-  }
-  
-  .graph-wrapper > div:last-child {
-    grid-column: 3 / 4;
-  }
-  
+  display: grid;
+  grid-template-columns: 15% auto 15%;
+  grid-template-rows: auto;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.graph-wrapper>div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  padding: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.graph-wrapper>div:first-child {
+  grid-column: 1 / 2;
+}
+
+.graph-wrapper>div:nth-child(2) {
+  background: linear-gradient(to bottom right, #FFFF66, #FFCC66);
+  height: 30px;
+  grid-column: 2 / 3;
+}
+
+.graph-wrapper>div:last-child {
+  grid-column: 3 / 4;
+}
