@@ -19,6 +19,7 @@ const searchByContaingWords = (search) => {
 
 //  console.log(searchByStartingWord('A'))
 
+//selecting html elements for DOM manipulation
 const startWordBtn = document.querySelector('.start-btn')
 const containBtn = document.querySelector('.contain-btn')
 const searchBtn = document.querySelector('#search-button')
@@ -26,25 +27,26 @@ const searchBar = document.querySelector('input')
 const searchResultCount = document.querySelector('#search-result')
 const resultContainer = document.querySelector('.result-container')
 
+//Event Listiners
 startWordBtn.addEventListener('click', () => {
    startWordBtn.style.backgroundColor = '#15234b'
    containBtn.style.backgroundColor = '#6c81bb'
    searchBar.value = ''
    clearScreen()
-    searchFlag = 1
+    searchFlag = 1 //setting flag = 1 for search by starting word
 })
 containBtn.addEventListener('click', () => {
    startWordBtn.style.backgroundColor = '#6c81bb'
    containBtn.style.backgroundColor = '#15234b'
    searchBar.value = ''
    clearScreen()
-   searchFlag = 2
+   searchFlag = 2//setting flag = 1 for search by containing word
 })
 
 searchBar.addEventListener('input', (e) => {
    var searchResult = []
    var search = e.target.value
-   if(searchFlag == 1){
+   if(searchFlag == 1){// checing flag
        searchResult = searchByStartingWord(search.toUpperCase())
        searchResultCount.textContent = `Countries starts with ${search} are ${searchResult.length}`
       }else if(searchFlag == 2){
