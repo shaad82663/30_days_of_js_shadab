@@ -1,0 +1,104 @@
+
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* Name Div */
+.name-div {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+}
+
+/* Designation Div */
+.designation-div {
+    margin-bottom: 30px;
+    background-color: #ddd;
+    padding: 10px;
+}
+
+/* About Div */
+.about-div {
+    margin-bottom: 30px;
+}
+
+/* Skills Div */
+.skills-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+/* Skill */
+.course {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100px;
+    background-color: #ddd;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.course:hover {
+    box-shadow: 5px 5px 10px #bbb;
+}
+
+/* Ending Div */
+.ending-div {
+    font-size: 2em;
+    text-align: center;
+}
+/* .ending-div span {
+    font-size: 1em;
+} */
+
+span {
+    opacity: 0;
+    color:  blue;
+    animation: fade-in 1s ease-in-out forwards;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .roles {
+    opacity: 0;
+    animation: fade-in-roles 1s ease-in-out forwards;
+  }
+  
+  @keyframes fade-in-roles {
+    from {
+      opacity: 0;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(100);
+    }
+  }
+
+.skills {
+  font-weight:  bold;
+  font-size:  2em;
+}
+
+p{
+    font-size: 20px;
+    text-align: left;
+}
