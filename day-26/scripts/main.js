@@ -32,6 +32,7 @@ startWordBtn.addEventListener('click', () => {
    startWordBtn.style.backgroundColor = '#15234b'
    containBtn.style.backgroundColor = '#6c81bb'
    searchBar.value = ''
+    searchResultCount.innerHTML = ''
    clearScreen()
     searchFlag = 1 //setting flag = 1 for search by starting word
 })
@@ -39,6 +40,7 @@ containBtn.addEventListener('click', () => {
    startWordBtn.style.backgroundColor = '#6c81bb'
    containBtn.style.backgroundColor = '#15234b'
    searchBar.value = ''
+    searchResultCount.innerHTML = ''
    clearScreen()
    searchFlag = 2//setting flag = 1 for search by containing word
 })
