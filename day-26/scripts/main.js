@@ -1,18 +1,11 @@
 var searchFlag = 0 // Search flag to determine if the search is 'start with' -> (1) or 'any word' -> (2) 
-//To clear already renderd elements in search result
-const clearScreen = () => {
-   const resultItems = document.querySelector('.result-container')
-    resultItems.innerHTML = ''
-}
 
 const searchByStartingWord = (search) => {
-   clearScreen();
    const result = countries.filter( country => country.toUpperCase().startsWith(search))
    return result
 }
 
 const searchByContaingWords = (search) => {
-   clearScreen();
     const result = countries.filter( country => country.toUpperCase().includes(search))
     return result
  }
@@ -32,16 +25,16 @@ startWordBtn.addEventListener('click', () => {
    startWordBtn.style.backgroundColor = '#15234b'
    containBtn.style.backgroundColor = '#6c81bb'
    searchBar.value = ''
-    searchResultCount.innerHTML = ''
-   clearScreen()
+   searchResultCount.innerHTML = ''
+   resultContainer.replaceChildren('')
     searchFlag = 1 //setting flag = 1 for search by starting word
 })
 containBtn.addEventListener('click', () => {
    startWordBtn.style.backgroundColor = '#6c81bb'
    containBtn.style.backgroundColor = '#15234b'
    searchBar.value = ''
-    searchResultCount.innerHTML = ''
-   clearScreen()
+   searchResultCount.innerHTML = ''
+   resultContainer.replaceChildren('')
    searchFlag = 2//setting flag = 1 for search by containing word
 })
 
@@ -50,12 +43,12 @@ searchBar.addEventListener('input', (e) => {
    var search = e.target.value
    if(searchFlag == 1){// checing flag
        searchResult = searchByStartingWord(search.toUpperCase())
-       searchResultCount.textContent = `Countries starts with ${search} are ${searchResult.length}`
+      searchResultCount.textContent = `Countries starts with ${search} are ${searchResult.length}`
       }else if(searchFlag == 2){
          searchResult = searchByContaingWords(search.toUpperCase())
        searchResultCount.textContent = `Countries contains ${search} are ${searchResult.length}`
       }else{
-         clearScreen()
+         resultContainer.replaceChildren('')
          const warning = document.createElement('h1')
          warning.textContent = 'Click on any one search type. Search with starting word or Search with any word!! '
          warning.style.color='red'
@@ -65,12 +58,12 @@ searchBar.addEventListener('input', (e) => {
          warning.style.textAlign = 'center'
          resultContainer.appendChild(warning)
        }
-     
+      const resultElements = []
       for(const country of searchResult){
           const resultItem = document.createElement('div')
           resultItem.className = 'result-item'
           resultItem.textContent = country
-          resultContainer.appendChild(resultItem) 
+          resultElements.push(resultItem)
       }
-
+      if(searchFlag != 0) resultContainer.replaceChildren(...resultElements)
 })
