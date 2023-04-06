@@ -71,7 +71,8 @@ btn.addEventListener('click', (e) => {
     resultWeight.style.width = '50%'
     img.style.width = '0'
     description.textContent = 'Enter both mass on Earth and name of planet'
-  }else{
+  }else if(isNaN(massOnEarth.value))  description.textContent = 'Enter valid mass'
+  else{
     resultWeight.style.width = '300px'
     img.style.width = '300px'
         description.textContent = `The weight of the object on ${planetName.value}`
