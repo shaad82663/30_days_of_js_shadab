@@ -1,0 +1,72 @@
+/* Set global font family */
+body {
+	font-family: 'Montserrat', sans-serif;
+    background-image: url('../images/galaxy.gif');
+}
+
+/* Set styles for header section */
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+h1 {
+	margin-top: 0;
+}
+
+input[type="text"], select, button {
+	padding: 10px;
+	font-size: 16px;
+	margin: 10px;
+}
+
+select {
+	width: 200px;
+}
+
+button {
+	background-color: #4CAF50;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+/* Set styles for main section */
+.main {
+	padding: 20px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.flex-item {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+	width: 300px;
+}
+
+.planet-image {
+	width: 100%;
+	height: auto;
+}
+
+.description {
+	width: 200px;
+	padding: 20px;
+	background-color: #fff;
+	color: #333;
+	text-align: center;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
