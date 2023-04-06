@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>30DaysOfJavaScript:22 Day: World Countries List</title>
+   
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+
+	<style>
+		.grid-container {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			grid-gap: 10px;
+		}
+
+		.grid-item {
+			padding: 10px;
+			box-sizing: border-box;
+			height: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid #ddd;
+			box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+		}
+		header {
+			text-align:  center;
+		}
+		h2 {
+			font-family: 'Roboto Condensed', sans-serif;
+			letter-spacing: 10px;
+		}
+		h3{			font-family: 'fantasy', sans-serif;
+
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h2>World Countries List</h2>
+		<h4 id="total-countries"></h4>
+		<h3>30DaysOfJavaScript:DOM-Day-2</h3>
+		<h3>Author: Asabeneh Yetayeh</h3>
+
+	</header>
+
+	<div class="countries-container">
+		<div class="grid-container">
+
+		</div>
+	</div>
+
+	<script src="./data/countries.js"></script>
+	<script src="./scripts/main.js"></script>
+
+</body>
+
+</html>
