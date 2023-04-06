@@ -67,7 +67,7 @@ btn.addEventListener('click', (e) => {
   
   clearDesciption(description, weight)
   if(!planetName.value || !massOnEarth.value || planetName.value === 'none')  {
-    clearDesciption(description, weight)
+    clearDesciption(description, weight)  
     resultWeight.style.width = '50%'
     img.style.width = '0'
     description.textContent = 'Enter both mass on Earth and name of planet'
