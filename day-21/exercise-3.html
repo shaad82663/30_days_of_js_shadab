@@ -1,13 +1,17 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>JavaScript for Everyone:DOM</title>
-  </head>
-  <body>
+    <link type="text/css" rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
     <div class="wrapper">
-        <h1>Asabeneh Yetayeh challenges in 2020</h1>
+        <h1>Asabeneh Yetayeh challenges in <span>2020</span></h1>
         <h2>30DaysOfJavaScript Challenge</h2>
+        <div class="timer"></div>
         <ul>
             <li>30DaysOfPython Challenge Done</li>
             <li>30DaysOfJavaScript Challenge Ongoing</li>
@@ -19,26 +23,44 @@
         </ul>
     </div>
     <script>
-        const heading = document.querySelector('h1')
-        setInterval(()=> {
+        const timer = document.querySelector('.timer')
+        const getTimeAndDate = function(){
+
+        const date = new Date();
+        const monthNames = ['January', 'February', 'March', 'April', 'May',
+            'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        const month = monthNames[date.getMonth()];
+        const day = date.getDate();
+        const year = date.getFullYear();
+
+        const hours = date.getHours();
+        const minutes = date.getMinutes();
+        const seconds = date.getSeconds();
+
+        return `${month} ${day}, ${year}, ${hours}:${minutes}:${seconds}`;
+        }
+
+        const year = document.querySelector('span')
+        setInterval(() => {
             const r = Math.floor(Math.random() * 256)
             const g = Math.floor(Math.random() * 256)
             const b = Math.floor(Math.random() * 256)
-        heading.style.color = `rgb(${r},${g},${b})`
-        console.log(`rgb(${r},${g},${b})`)
-        }, 2000)
+            year.style.color = `rgb(${r},${g},${b})`
+            timer.textContent = getTimeAndDate()
+        }, 1000)
         const listItems = document.querySelectorAll('li')
-        for(let i=0; i<listItems.length; i++){
+        for (let i = 0; i < listItems.length; i++) {
             let listItem = listItems[i].textContent;
-            if(listItem.includes('Done')){
-                listItems[i].style.color='green'
-            }else if(listItem.includes('Ongoing')){
-                listItems[i].style.color='yellow'
-            }else if(listItem.includes('Coming')){
-                listItems[i].style.color='red'
+            if (listItem.includes('Done')) {
+                listItems[i].style.backgroundColor = 'green'
+            } else if (listItem.includes('Ongoing')) {
+                listItems[i].style.backgroundColor = 'yellow'
+            } else if (listItem.includes('Coming')) {
+                listItems[i].style.backgroundColor = 'red'
             }
         }
 
     </script>
-  </body>
+</body>
+
 </html>
