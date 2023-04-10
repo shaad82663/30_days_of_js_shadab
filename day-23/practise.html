@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Object Model</title>
+  </head>
+
+  <body onload="load()">
+    <p></p>
+    <input type="text" name="name"  placeholder="Speed" />
+    <input type="text" name="email"  placeholder="Time" />
+    <button>Click Me</button>
+    <button onclick="clickMe()">Click Me Also</button>
+    <script>
+      const buttons = document.querySelectorAll('button')
+      const inputs = document.querySelectorAll('input')
+      const para = document.querySelector('p')
+      var distance = 0;
+      buttons[0].addEventListener('click', (e) => {
+          distance  = inputs[0].value * inputs[1].value
+          para.textContent = distance
+      })
+
+      const load = () => {
+        console.log('function loaded')
+      }
+      
+      const clickMe = () => {
+        console.log('clicked')
+      }
+
+    //   inputs[0].addEventListener('keypress', (e) => {
+    //     console.log(e.target.value)
+    //   })
+    </script>
+  </body>
+</html>
