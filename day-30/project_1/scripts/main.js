@@ -14,7 +14,7 @@ const appendText = function(){
             const color =   `rgb(${r},${g},${b})`
             const span = document.createElement('span')
             span.textContent = str.charAt(i)
-            span.style.color = color
+            span.style.color = color  
             heading.appendChild(span)
         }
         const breakLine = document.createElement('br')
