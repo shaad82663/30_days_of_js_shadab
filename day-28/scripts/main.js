@@ -109,6 +109,13 @@ form.addEventListener('submit', function(event) {
       return;
      }
   }
+  if(inputs[3].value > 100) {
+    warning.textContent = 'Score cannot be more than 100'
+    return;    
+  }else if(inputs[3].value < 0){
+    warning.textContent = 'Score cannot be less than 0'
+    return;       
+  }
   //push the score in leaderboard array
   const score = {
     firstName : inputs[0].value,
