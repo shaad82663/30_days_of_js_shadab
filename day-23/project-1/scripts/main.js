@@ -27,7 +27,7 @@ submitBtn.addEventListener('click', (e) => {
     const colors = ["red","green", "yellow"]
     var dex = 0
     let div
-    for (let i = 0; i < range; i++) {
+    for (let i = 0; i < range; i++) {   
         div = document.createElement('div')
         div.className = 'grid-item'
         div.textContent = i
