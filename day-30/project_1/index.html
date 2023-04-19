@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>30DaysOfJavaScript:11 Day </title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="first-section">
+			<h1>World Countries Data</h1>
+			<p class="subtitle">Total number of countries 193</p>
+			<p id="search-result"></p>
+			<div class="search-bar">
+				<input type="text" id="search-input" placeholder="Search..." />
+			</div>
+			<div class="filter-buttons">
+				<button class="name-btn">Name</button>
+				<button class="capital-btn">Capital</button>
+				<button class="population-btn">Population</button>
+				<a href="#graph" class="show-graph-link">&#8595; &#8593;</a>
+			</div>
+		</div>
+		<div class="second-section">
+			<div class="result-container">
+			</div>
+		</div>
+		<div class="graph-section" id="graph">
+			<div class="graph-section-header">
+				<button  class="graph-btn graph-population-btn">Population</button>
+				<button  class="graph-btn graph-languages-btn" >Languages</button>
+				<p class="graph-heading"><p>
+			</div>
+		  </div>
+		  
+	</div>
+	<script src="./data/countries.js"></script>
+	<script src="./scripts/main.js"></script>
+	<script src="./scripts/index.js"></script>
+
+</body>
+</html>

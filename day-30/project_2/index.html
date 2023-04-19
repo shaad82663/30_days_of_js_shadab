@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validating Web Forms</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+    <center><h1>Validating Web Forms</h1></center>
+	<div class="container">
+		<form class="my-form">
+			<div class="form-group">
+				<label for="first-name">First Name:</label>
+				<input type="text" class="first-name" name="first-name" required>
+			</div>
+			<div class="form-group">
+				<label for="last-name">Last Name:</label>
+				<input type="text" class="last-name" name="last-name" required>
+			</div>
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" class="email" name="email" required>
+			</div>
+			<div class="form-group">
+				<label for="password">Password:</label>
+				<input type="password" class="password" name="password" required>
+			</div>
+			<div class="form-group">
+				<label for="telephone">Telephone:</label>
+				<input type="tel" class="telephone" name="telephone" required>
+			</div>
+			<div class="form-group">
+				<label for="bio">Your Bio:</label>
+				<textarea class="bio" name="bio" required></textarea>
+			</div>
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
